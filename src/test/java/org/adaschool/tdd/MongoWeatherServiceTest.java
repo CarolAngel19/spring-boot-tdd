@@ -39,6 +39,7 @@ class MongoWeatherServiceTest
     @Test
     void createWeatherReportCallsSaveOnRepository()
     {
+        MongoWeatherService weatherService = new MongoWeatherService(repository);
         double lat = 4.7110;
         double lng = 74.0721;
         GeoLocation location = new GeoLocation( lat, lng );
@@ -50,6 +51,7 @@ class MongoWeatherServiceTest
     @Test
     void weatherReportIdFoundTest()
     {
+        MongoWeatherService weatherService = new MongoWeatherService(repository);
         String weatherReportId = "awae-asd45-1dsad";
         double lat = 4.7110;
         double lng = 74.0721;

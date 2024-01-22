@@ -19,10 +19,10 @@ public class HealthControllerTest
 
     @Test
     public void greetingShouldReturnDefaultMessage()
-        throws Exception
+            throws Exception
     {
         assertThat(
-            this.restTemplate.getForObject( "http://localhost:" + port + "/v1/health", String.class ) ).contains(
-            "API Working OK!" );
+                this.restTemplate.getForObject( "http://localhost:" + port + "/v1/health", String.class ) ).contains(
+                "API Working OK!" );
     }
 }
